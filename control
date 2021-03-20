@@ -1,0 +1,21 @@
+Package: com.haoict.iconcert
+Name: IconCert 14
+Depends: mobilesubstrate, preferenceloader, com.haoict.libhdev (>= 4.8.0), firmware (>= 13)
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Show remaining certificate time on app icon
+ Show remaining certificate time on app icon
+ Change log: https://github.com/haoict/iconcert/releases
+ . 
+ Features:
+ - Show remaining certificate time on app icon
+ - Custom styles (opacity, animation, time format)
+ - Support iOS 13 - 14
+ . 
+ I work very hard to make good, free and open source tweaks for everyone
+ If you want to support, you can buy me a coffee at https://www.paypal.me/haoict
+ . 
+ Thanks a ton
+Maintainer: Hao Nguyen
+Author: Hao Nguyen
+Section: Tweaks

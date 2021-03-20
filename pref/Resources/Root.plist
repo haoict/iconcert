@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>items</key>
+    <array>
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>headerCellClass</key>
+        <string>HPSHeaderTextCell</string>
+        <key>label</key>
+        <string>IconCert</string>
+        <key>subtitles</key>
+        <array>
+          <string>By @haoict</string>
+          <string>Made with love</string>
+        </array>
+      </dict>
+
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>MAIN_PREFERENCES</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSSwitchCell</string>
+        <key>cellClass</key>
+        <string>HPSSwitchCell</string>
+        <key>default</key>
+        <true/>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>enable</string>
+        <key>label</key>
+        <string>ENABLE</string>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSSwitchCell</string>
+        <key>cellClass</key>
+        <string>HPSSwitchCell</string>
+        <key>default</key>
+        <false/>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>animation</string>
+        <key>label</key>
+        <string>ANIMATION</string>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSLinkListCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>timeFormat</string>
+        <key>label</key>
+        <string>TIME_FORMAT</string>
+        <key>detail</key>
+        <string>HPSListItemsController</string>
+        <key>validTitles</key>
+        <array>
+          <string>dd hh (6d 23h)</string>
+          <string>dd (6.5d)</string>
+          <string>hh (144h)</string>
+          <string>ss (50000s)</string>
+        </array>
+        <key>validValues</key>
+        <array>
+          <integer>0</integer>
+          <integer>1</integer>
+          <integer>2</integer>
+          <integer>3</integer>
+        </array>
+        <key>default</key>
+        <integer>0</integer>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>OPACITY</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSSliderCell</string>
+        <key>cellClass</key>
+        <string>HPSSliderCell</string>
+        <key>default</key>
+        <integer>80</integer>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>opacity</string>
+        <key>min</key>
+        <integer>10</integer>
+        <key>max</key>
+        <integer>100</integer>
+        <key>showValue</key>
+        <true/>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>APP_ID_KEYWORD</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSEditTextCell</string>
+        <key>cellClass</key>
+        <string>HPSEditTextCell</string>
+        <key>placeholder</key>
+        <string>science.xnu.undecimus,com.rileytestut.AltStore</string>
+        <key>default</key>
+        <string>science.xnu.undecimus,com.rileytestut.AltStore</string>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>whitelistBundleIds</string>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+      <!-- Other Settings -->
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>OTHER_PREFERENCES</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>label</key>
+        <string>RESET_SETTINGS</string>
+        <key>action</key>
+        <string>resetSettings:</string>
+      </dict>
+
+      <!-- Support Me -->
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>SUPPORT_ME</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>label</key>
+        <string>Hao Nguyen 👨🏻‍💻</string>
+        <key>subtitle</key>
+        <string>@haoict</string>
+        <key>action</key>
+        <string>openURL:</string>
+        <key>url</key>
+        <string>https://twitter.com/haoict</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>label</key>
+        <string>DONATION</string>
+        <key>subtitle</key>
+        <string>BUY_ME_A_COFFEE</string>
+        <key>action</key>
+        <string>openURL:</string>
+        <key>url</key>
+        <string>https://paypal.me/haoict</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>label</key>
+        <string>FEATURE_REQUEST</string>
+        <key>subtitle</key>
+        <string>SEND_ME_AN_EMAIL_WITH_YOUR_REQUEST</string>
+        <key>action</key>
+        <string>openURL:</string>
+        <key>url</key>
+        <string>mailto:hao.ict56@gmail.com?subject=IconCertt%20Feature%20Request</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSLinkCell</string>
+        <key>cellClass</key>
+        <string>HPSLinkCell</string>
+        <key>label</key>
+        <string>FOUND_A_BUG</string>
+        <key>subtitle</key>
+        <string>LEAVE_A_BUG_REPORT_ON_GITHUB</string>
+        <key>action</key>
+        <string>openURL:</string>
+        <key>url</key>
+        <string>https://github.com/haoict/iconcert/issues/new</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>footerText</key>
+        <string>IconCert, Made With ❤️</string>
+        <key>isStaticText</key>
+        <true/>
+      </dict>
+
+    </array>
+    <key>title</key>
+    <string>IconCert</string>
+  </dict>
+</plist>
