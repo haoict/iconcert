@@ -88,14 +88,19 @@ static NSString* formatTime(double second) {
 
     - (id)initWithFrame:(CGRect)arg1 {
       id orig = %orig;
-      [self setupBadgeView];
+      // Fix crash due to conflict with SnowBoard
+      if ([self respondsToSelector:@selector(setupBadgeView)]) {
+        [self setupBadgeView];
+      }
       return orig;
     }
 
     -(void)updateImageAnimated:(BOOL)arg1 {
       %orig;
-
-      [self updateBadgeView];
+      // Fix crash due to conflict with SnowBoard
+      if ([self respondsToSelector:@selector(updateBadgeView)]) {
+        [self updateBadgeView];
+      }
     }
 
     %new
