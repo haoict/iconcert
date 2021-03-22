@@ -20,38 +20,22 @@ static void reloadPrefs() {
 }
 
 static NSTimeInterval getExpirationTimeLeft(NSURL *bundleUrl) {
-  NSError *error = nil;
-  // NSURL *bundleUrl = [[%c(LSBundleProxy) bundleProxyForIdentifier:@"science.xnu.undecimus.32CDKB8PZH"] bundleURL];
-  NSURL *mobileProvisionUrl = [bundleUrl URLByAppendingPathComponent:@"embedded.mobileprovision"];
-  NSString *mobileProvisionContent = [NSString stringWithContentsOfURL:mobileProvisionUrl encoding:NSASCIIStringEncoding error:&error];
-
-  if ([mobileProvisionContent length] == 0) {
-    // [HCommon showAlertMessage:[error localizedDescription] withTitle:@"Error" viewController:nil];
-    return ERROR_TIMELEFT;
-  }
-  
-  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<date>(.*)</date>" options:NSRegularExpressionCaseInsensitive error:&error];
-  NSArray *matchesInString = [regex matchesInString:mobileProvisionContent options:0 range:NSMakeRange(0, [mobileProvisionContent length])];
-
-  if (matchesInString == nil || [matchesInString count] < 1) {
-    // [HCommon showAlertMessage:@"Can't find match <date>(.*)</date> string" withTitle:@"Error" viewController:nil];
-    return ERROR_TIMELEFT;
-  }
-
-  // get ExpirationDate, its index is 1, the index 0 is CreationDate
-  NSTextCheckingResult *match = matchesInString[1];
-  // get date string only in regex group (.*). If you want to get all match string, use [match range];
-  NSString* expirationDateStr = [mobileProvisionContent substringWithRange:[match rangeAtIndex:1]];
-
-  // calculate diff between expire date to now
-  NSDate *now = [NSDate date];
-  
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
-  NSDate *capturedStartDate = [dateFormatter dateFromString:expirationDateStr];
-
-  NSTimeInterval diff = [capturedStartDate timeIntervalSinceDate:now];
-  return diff;
+    NSError *error;
+    NSPropertyListFormat plistFormat;
+    NSURL *mobileProvisionUrl = [bundleUrl URLByAppendingPathComponent:@"embedded.mobileprovision"];
+    NSString *plistDataString = [[NSString alloc] initWithContentsOfFile:mobileProvisionUrl.path encoding:NSISOLatin1StringEncoding error:nil];
+    NSScanner *scanner = [[NSScanner alloc] initWithString:plistDataString];
+    [scanner scanUpToString:@"<plist" intoString:nil];
+    
+    NSString *extractedPlist;
+    if ([scanner scanUpToString:@"</plist>" intoString:&extractedPlist]) {
+        NSData *plistData = [[extractedPlist stringByAppendingString:@"</plist>"] dataUsingEncoding:NSISOLatin1StringEncoding];
+        NSMutableDictionary *plistDictionary = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListImmutable format:&plistFormat error:&error];
+        NSDate *ExpirationDate = [plistDictionary valueForKey:@"ExpirationDate"];
+        return [ExpirationDate timeIntervalSinceNow];
+    } else {
+        return ERROR_TIMELEFT;
+    }
 }
 
 static NSString* formatTime(double second) {
