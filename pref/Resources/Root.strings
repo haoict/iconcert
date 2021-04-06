@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ANIMATION</key>
+	<string>启用动画</string>
+	<key>APPLY</key>
+	<string>应用</string>
+	<key>APP_ID_KEYWORD</key>
+	<string>填入要显示签名过期时间应用的Bundle ID(应用包名)，用英文逗号分隔。</string>
+	<key>BUY_ME_A_COFFEE</key>
+	<string>捐赠作者</string>
+	<key>CANCEL</key>
+	<string>取消</string>
+	<key>CONFIRM</key>
+	<string>确认</string>
+	<key>DEFAULT</key>
+	<string>默认</string>
+	<key>DONATION</key>
+	<string>捐赠作者 💰</string>
+	<key>DO_YOU_REALLY_WANT_TO_RESPRING</key>
+	<string>你要注销设备吗?</string>
+	<key>ENABLE</key>
+	<string>功能启用</string>
+	<key>FEATURE_REQUEST</key>
+	<string>功能要求 ✨</string>
+	<key>FOUND_A_BUG</key>
+	<string>反馈bug 🐛</string>
+	<key>Hao Nguyen 👨🏻‍💻</key>
+	<string>作者推特 👨🏻‍💻</string>
+	<key>IconCert, Made With ❤️</key>
+	<string>IconCert, 用 ❤️ 制造！</string>
+	<key>LEAVE_A_BUG_REPORT_ON_GITHUB</key>
+	<string>在Github上留下错误报告</string>
+	<key>MAIN_PREFERENCES</key>
+	<string>主要设置</string>
+	<key>Made with love</key>
+	<string>签名过期时间</string>
+	<key>OPACITY</key>
+	<string>不透明度</string>
+	<key>OTHER_PREFERENCES</key>
+	<string>其他设置</string>
+	<key>RESET_SETTINGS</key>
+	<string>重置设置</string>
+	<key>SEND_ME_AN_EMAIL_WITH_YOUR_REQUEST</key>
+	<string>给我发送您的功能请求电子邮件</string>
+	<key>SOURCE_CODE</key>
+	<string>开源地址 🤖</string>
+	<key>SUPPORT_ME</key>
+	<string>支持(🇨🇳简体中文:妖刀)</string>
+	<key>TIME_FORMAT</key>
+	<string>时间格式</string>
+</dict>
+</plist>
