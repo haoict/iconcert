@@ -1,0 +1,26 @@
+{
+"ANIMATION"="启用动画";
+"APPLY"="应用";
+"APP_ID_KEYWORD"="填入要显示签名过期时间应用的Bundle ID(应用包名)，用英文逗号分隔。";
+"BUY_ME_A_COFFEE"="捐赠作者";
+"CANCEL"="取消";
+"CONFIRM"="确认";
+"DEFAULT"="默认";
+"DONATION"="捐赠作者 💰";
+"DO_YOU_REALLY_WANT_TO_RESPRING"="你要注销设备吗?";
+"ENABLE"="功能启用";
+"FEATURE_REQUEST"="功能要求 ✨";
+"FOUND_A_BUG"="反馈bug 🐛";
+"Hao Nguyen "="作者推特 👨";
+"IconCert, Made With "="IconCert, 用 ❤️ 制造！";
+"LEAVE_A_BUG_REPORT_ON_GITHUB"="在Github上留下错误报告";
+"MAIN_PREFERENCES"="主要设置";
+"Made with love"="签名过期时间";
+"OPACITY"="不透明度";
+"OTHER_PREFERENCES"="其他设置";
+"RESET_SETTINGS"="重置设置";
+"SEND_ME_AN_EMAIL_WITH_YOUR_REQUEST"="给我发送您的功能请求电子邮件";
+"SOURCE_CODE"="开源地址 🤖";
+"SUPPORT_ME"="支持";
+"TIME_FORMAT"="时间格式";
+}
