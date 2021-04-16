@@ -134,9 +134,9 @@
         <key>cellClass</key>
         <string>HPSEditTextCell</string>
         <key>placeholder</key>
-        <string>science.xnu.undecimus,com.rileytestut.AltStore</string>
+        <string>science.xnu.undecimus,com.odysseyteam.taurine,com.rileytestut.AltStore</string>
         <key>default</key>
-        <string>science.xnu.undecimus,com.rileytestut.AltStore</string>
+        <string>science.xnu.undecimus,com.odysseyteam.taurine,com.rileytestut.AltStore</string>
         <key>defaults</key>
         <string>com.haoict.iconcertpref</string>
         <key>key</key>

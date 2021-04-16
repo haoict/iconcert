@@ -1,6 +1,6 @@
 #import "Tweak.h"
 
-NSString *defaultWhitelistBundleIdsStr = @"science.xnu.undecimus,com.rileytestut.AltStore";
+NSString *defaultWhitelistBundleIdsStr = @"science.xnu.undecimus,com.odysseyteam.taurine,com.rileytestut.AltStore";
 
 static BOOL enable;
 static BOOL animation;
