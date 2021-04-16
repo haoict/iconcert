@@ -10,6 +10,7 @@
   "TIME_FORMAT" = "Time Format";
   "APP_ID_KEYWORD" = "App Id keyword to show IconCert, separate by comma";
   "OPACITY" = "Opacity";
+  "TOP_PADDING" = "Top Padding";
   "OTHER_PREFERENCES" = "Other Preferences";
   "RESET_SETTINGS" = "Reset Settings";
   "SUPPORT_ME" = "Support Me";

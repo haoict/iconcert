@@ -1,7 +1,7 @@
 Package: com.haoict.iconcert
 Name: IconCert 14
 Depends: mobilesubstrate, preferenceloader, com.haoict.libhdev (>= 4.8.0), firmware (>= 13)
-Version: 1.0.1
+Version: 1.1.0
 Architecture: iphoneos-arm
 Description: Show remaining certificate time on app icon
  Show remaining certificate time on app icon

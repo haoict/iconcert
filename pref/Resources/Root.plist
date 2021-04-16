@@ -126,6 +126,34 @@
         <key>cell</key>
         <string>PSGroupCell</string>
         <key>label</key>
+        <string>TOP_PADDING</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSSliderCell</string>
+        <key>cellClass</key>
+        <string>HPSSliderCell</string>
+        <key>default</key>
+        <integer>5</integer>
+        <key>defaults</key>
+        <string>com.haoict.iconcertpref</string>
+        <key>key</key>
+        <string>topPadding</string>
+        <key>min</key>
+        <integer>0</integer>
+        <key>max</key>
+        <integer>48</integer>
+        <key>showValue</key>
+        <true/>
+        <key>PostNotification</key>
+        <string>com.haoict.iconcertpref/PrefChanged</string>
+      </dict>
+
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
         <string>APP_ID_KEYWORD</string>
       </dict>
       <dict>

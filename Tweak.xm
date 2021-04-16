@@ -5,6 +5,7 @@ NSString *defaultWhitelistBundleIdsStr = @"science.xnu.undecimus,com.odysseyteam
 static BOOL enable;
 static BOOL animation;
 static double opacity;
+static double topPadding;
 static int timeFormat;
 static NSArray *whitelistBundleIds;
 
@@ -14,6 +15,7 @@ static void reloadPrefs() {
   enable = [[settings objectForKey:@"enable"] ?: @(YES) boolValue];
   animation = [[settings objectForKey:@"animation"] ?: @(NO) boolValue];
   opacity = ([settings objectForKey:@"opacity"] == nil ? 80.0 : [[settings objectForKey:@"opacity"] doubleValue]) / 100.0;
+  topPadding = ([settings objectForKey:@"topPadding"] == nil ? 5.0 : [[settings objectForKey:@"topPadding"] doubleValue]);
   timeFormat = [[settings objectForKey:@"timeFormat"] intValue] ?: 0;
   NSString *whitelistBundleIdsStr = [[settings objectForKey:@"whitelistBundleIds"] ?: defaultWhitelistBundleIdsStr stringValue];
   whitelistBundleIds = [whitelistBundleIdsStr componentsSeparatedByString:@","];
@@ -129,8 +131,8 @@ static NSString* formatTime(double second) {
 
       [self addSubview:self.badgeView];
       self.badgeView.translatesAutoresizingMaskIntoConstraints = false;
-      [self.badgeView.topAnchor constraintEqualToAnchor:self.topAnchor constant:5.0].active = YES;
-      [self.badgeView.bottomAnchor constraintEqualToAnchor:self.topAnchor constant:21.0].active = YES;
+      [self.badgeView.topAnchor constraintEqualToAnchor:self.topAnchor constant:topPadding].active = YES;
+      [self.badgeView.bottomAnchor constraintEqualToAnchor:self.topAnchor constant:topPadding+16.0].active = YES;
       [self.badgeView.leftAnchor constraintEqualToAnchor:self.leftAnchor constant:6.0].active = YES;
       [self.badgeView.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-6.0].active = YES;
 

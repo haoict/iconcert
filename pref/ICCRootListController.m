@@ -16,8 +16,8 @@
 }
 
 - (void)apply {
-  [HCommon showToastMessage:@"" withTitle:@"Done" timeout:1 viewController:self];
-  // [HCommon killProcess:@"backboardd" viewController:self alertTitle:@TWEAK_TITLE message:[self localizedItem:@"DO_YOU_REALLY_WANT_TO_RESPRING"] confirmActionLabel:[self localizedItem:@"CONFIRM"] cancelActionLabel:[self localizedItem:@"CANCEL"]];
+  // [HCommon showToastMessage:@"" withTitle:@"Done" timeout:1 viewController:self];
+  [HCommon killProcess:@"backboardd" viewController:self alertTitle:@TWEAK_TITLE message:[self localizedItem:@"DO_YOU_REALLY_WANT_TO_RESPRING"] confirmActionLabel:[self localizedItem:@"CONFIRM"] cancelActionLabel:[self localizedItem:@"CANCEL"]];
 }
 
 @end
